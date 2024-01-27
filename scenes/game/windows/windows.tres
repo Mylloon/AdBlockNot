@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c4f16i11bfk0u"]
+
+[ext_resource type="Texture2D" uid="uid://cywgd6e1ef0ro" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Window_Header.png" id="1_0a8ho"]
+[ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="1_olu6k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h2pce"]
+texture = ExtResource("1_0a8ho")
+
+[resource]
+default_font = ExtResource("1_olu6k")
+default_font_size = 30
+Panel/styles/panel = SubResource("StyleBoxTexture_h2pce")
+Window/styles/embedded_border = null

@@ -1,0 +1,105 @@
+[gd_scene load_steps=12 format=3 uid="uid://ur6erv76d2of"]
+
+[ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="1_7ecbr"]
+[ext_resource type="Texture2D" uid="uid://c012k8qiyjn4a" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="2_j8eab"]
+[ext_resource type="Texture2D" uid="uid://ca0n6csxw7yd7" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Pressed.png" id="3_eb8po"]
+[ext_resource type="Texture2D" uid="uid://c1s8gaui8k13h" path="res://models/RetroWindowsGUI/Flag.png" id="4_medxy"]
+[ext_resource type="PackedScene" uid="uid://bk0s4luxcotjd" path="res://scenes/game/windows/windows.tscn" id="5_hgcmp"]
+[ext_resource type="Shader" path="res://scenes/game/oldscreen.gdshader" id="6_7ta02"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_se4f0"]
+bg_color = Color(0.764706, 0.764706, 0.764706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mxax"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mbq4w"]
+texture = ExtResource("2_j8eab")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+draw_center = false
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lgpbg"]
+texture = ExtResource("3_eb8po")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+draw_center = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lp2yn"]
+shader = ExtResource("6_7ta02")
+shader_parameter/SCREEN_HEIGHT = 240.0
+
+[node name="WindowsDesktop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.45098, 0.509804, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -54.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_se4f0")
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2mxax")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 118.0
+offset_bottom = 50.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_7ecbr")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxTexture_mbq4w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lgpbg")
+text = "Start"
+icon = ExtResource("4_medxy")
+expand_icon = true
+
+[node name="Windows" parent="." instance=ExtResource("5_hgcmp")]
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_lp2yn")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
