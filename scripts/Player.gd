@@ -1,13 +1,13 @@
-extends RigidBody3D
+extends CharacterBody3D
 
 @onready var head := $Head
 
-const SPEED := 1200.0
+const SPEED := 5.0
 const MOUSE_SENSITIVITY := 0.15
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# Change input mode
+	# Trap the cursor on start
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 # Called at each input
@@ -21,13 +21,17 @@ func _input(event):
 		# Trap the cursor on click
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	# Movement
-	var input := Vector3.ZERO
-	input.x = Input.get_axis("move_left", "move_right")
-	input.z = Input.get_axis("move_forward", "move_backward")
-	apply_central_force(basis * input.normalized() * SPEED * delta)
+func _physics_process(delta):
+	# Get the input direction and handle the movement/deceleration.
+	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
+	move_and_slide()
 
 	# Free cursor
 	if Input.is_action_just_pressed("ui_cancel"):
