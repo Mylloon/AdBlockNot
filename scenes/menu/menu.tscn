@@ -1,78 +1,119 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgdlh6iv2j7we"]
+[gd_scene load_steps=6 format=3 uid="uid://do6hgdpuwfsmf"]
 
-[ext_resource type="Texture2D" uid="uid://bnd12xnq12mv3" path="res://models/menu/welcome.png" id="1_2gkos"]
-[ext_resource type="Texture2D" path="res://models/menu/Capture d’écran du 2024-01-27 17-48-43.png" id="2_4raw2"]
-
-[sub_resource type="Gradient" id="Gradient_pacrk"]
-offsets = PackedFloat32Array(0.684524, 1)
-colors = PackedColorArray(0.384314, 0.509804, 0.866667, 1, 0.635294, 0.698039, 0.870588, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_76il0"]
-gradient = SubResource("Gradient_pacrk")
-
-[sub_resource type="Gradient" id="Gradient_cwqoj"]
-offsets = PackedFloat32Array(0.160714, 0.386905, 0.636905)
-colors = PackedColorArray(0.384314, 0.509804, 0.866667, 1, 1, 1, 1, 1, 0.384314, 0.509804, 0.866667, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_yym56"]
-gradient = SubResource("Gradient_cwqoj")
-
-[sub_resource type="Gradient" id="Gradient_wb1y0"]
-colors = PackedColorArray(0.572549, 0.654902, 0.870588, 1, 0.384314, 0.509804, 0.866667, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_cmjru"]
-gradient = SubResource("Gradient_wb1y0")
+[ext_resource type="PackedScene" uid="uid://cgdlh6iv2j7we" path="res://scenes/menu/image_menu.tscn" id="1_f4wvw"]
+[ext_resource type="Script" path="res://scenes/menu/menu.gd" id="1_y4d58"]
+[ext_resource type="Texture2D" uid="uid://bcqdrfm52esft" path="res://models/menu/power_off.png" id="2_4yhxu"]
+[ext_resource type="Texture2D" uid="uid://plpafbpfkjd7" path="res://models/menu/PDP.png" id="3_a6fh8"]
+[ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="3_coatq"]
 
 [node name="Menu" type="Node2D"]
+script = ExtResource("1_y4d58")
 
-[node name="BG" type="ColorRect" parent="."]
-offset_left = 1.0
-offset_top = 3.0
-offset_right = 1600.0
-offset_bottom = 906.0
-color = Color(0.00392157, 0.184314, 0.607843, 1)
+[node name="image_menu" parent="." instance=ExtResource("1_f4wvw")]
 
-[node name="FG" type="ColorRect" parent="."]
-offset_left = 1.0
-offset_top = 105.0
-offset_right = 1601.0
-offset_bottom = 802.0
-color = Color(0.384314, 0.509804, 0.866667, 1)
+[node name="Menu" type="VBoxContainer" parent="."]
+offset_left = 915.0
+offset_top = 313.0
+offset_right = 1163.0
+offset_bottom = 433.0
+scale = Vector2(1.83, 1.83)
+theme_override_constants/separation = 29
+alignment = 1
 
-[node name="gradient" type="TextureRect" parent="."]
-offset_left = 681.0
-offset_top = 180.0
-offset_right = 1303.0
-offset_bottom = 862.0
-rotation = 1.57256
-texture = SubResource("GradientTexture1D_76il0")
+[node name="NormalStart" type="Button" parent="Menu"]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = " "
 
-[node name="welcome" type="TextureRect" parent="."]
-offset_left = 108.0
-offset_top = 294.0
-offset_right = 592.0
-offset_bottom = 473.0
-texture = ExtResource("1_2gkos")
+[node name="pdp1" type="TextureRect" parent="Menu/NormalStart"]
+layout_mode = 0
+offset_left = 1.0929
+offset_top = -5.46448
+offset_right = 41.0929
+offset_bottom = 34.5355
+texture = ExtResource("3_a6fh8")
 expand_mode = 1
 
-[node name="modele" type="TextureRect" parent="."]
-offset_left = 759.0
-offset_top = 573.0
-offset_right = 2322.0
-offset_bottom = 1463.0
-texture = ExtResource("2_4raw2")
+[node name="Label" type="Label" parent="Menu/NormalStart"]
+offset_left = 49.0
+offset_top = 2.0
+offset_right = 138.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_coatq")
+theme_override_font_sizes/font_size = 24
+text = "Start"
 
-[node name="horizontal line" type="TextureRect" parent="."]
-offset_top = 105.0
-offset_right = 1600.0
-offset_bottom = 107.0
-texture = SubResource("GradientTexture1D_yym56")
+[node name="InfiniteStart" type="Button" parent="Menu"]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = " "
 
-[node name="vertical line" type="TextureRect" parent="horizontal line"]
+[node name="pdp2" type="TextureRect" parent="Menu/InfiniteStart"]
+offset_top = -4.26229
+offset_right = 40.0
+offset_bottom = 35.7377
+texture = ExtResource("3_a6fh8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Menu/InfiniteStart"]
+offset_left = 49.0
+offset_top = 2.0
+offset_right = 138.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_coatq")
+theme_override_font_sizes/font_size = 24
+text = "Mode infini"
+
+[node name="Options" type="Button" parent="Menu"]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+text = "
+"
+
+[node name="pdp3" type="TextureRect" parent="Menu/Options"]
+offset_left = 1.0929
+offset_top = -4.69944
+offset_right = 41.0929
+offset_bottom = 35.3006
+texture = ExtResource("3_a6fh8")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Menu/Options"]
+offset_left = 49.0
+offset_top = 2.0
+offset_right = 138.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_coatq")
+theme_override_font_sizes/font_size = 24
+text = "Options"
+
+[node name="Power off" type="Button" parent="."]
+offset_left = 46.0
+offset_top = 828.0
+offset_right = 183.0
+offset_bottom = 858.0
+theme_type_variation = &"FlatButton"
+
+[node name="p_off" type="TextureRect" parent="Power off"]
 layout_mode = 0
-offset_left = 679.0
-offset_top = 3.0
-offset_right = 1373.0
-offset_bottom = 6.0
-rotation = 1.57089
-texture = SubResource("GradientTexture1D_cmjru")
+offset_left = 6.0
+offset_top = -3.0
+offset_right = 43.0
+offset_bottom = 32.0
+texture = ExtResource("2_4yhxu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Power off"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 2.0
+offset_right = 138.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_coatq")
+theme_override_font_sizes/font_size = 24
+text = "Power off"
+
+[connection signal="pressed" from="Menu/NormalStart" to="." method="_on_normal_start_pressed"]
+[connection signal="pressed" from="Menu/InfiniteStart" to="." method="_on_infinite_start_pressed"]
+[connection signal="pressed" from="Menu/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Power off" to="." method="_on_power_off_pressed"]
