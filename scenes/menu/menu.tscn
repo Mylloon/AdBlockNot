@@ -1,3 +1,78 @@
-[gd_scene format=3 uid="uid://cgdlh6iv2j7we"]
+[gd_scene load_steps=9 format=3 uid="uid://cgdlh6iv2j7we"]
+
+[ext_resource type="Texture2D" uid="uid://bnd12xnq12mv3" path="res://models/menu/welcome.png" id="1_2gkos"]
+[ext_resource type="Texture2D" path="res://models/menu/Capture d’écran du 2024-01-27 17-48-43.png" id="2_4raw2"]
+
+[sub_resource type="Gradient" id="Gradient_pacrk"]
+offsets = PackedFloat32Array(0.684524, 1)
+colors = PackedColorArray(0.384314, 0.509804, 0.866667, 1, 0.635294, 0.698039, 0.870588, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_76il0"]
+gradient = SubResource("Gradient_pacrk")
+
+[sub_resource type="Gradient" id="Gradient_cwqoj"]
+offsets = PackedFloat32Array(0.160714, 0.386905, 0.636905)
+colors = PackedColorArray(0.384314, 0.509804, 0.866667, 1, 1, 1, 1, 1, 0.384314, 0.509804, 0.866667, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yym56"]
+gradient = SubResource("Gradient_cwqoj")
+
+[sub_resource type="Gradient" id="Gradient_wb1y0"]
+colors = PackedColorArray(0.572549, 0.654902, 0.870588, 1, 0.384314, 0.509804, 0.866667, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_cmjru"]
+gradient = SubResource("Gradient_wb1y0")
 
 [node name="Menu" type="Node2D"]
+
+[node name="BG" type="ColorRect" parent="."]
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1600.0
+offset_bottom = 906.0
+color = Color(0.00392157, 0.184314, 0.607843, 1)
+
+[node name="FG" type="ColorRect" parent="."]
+offset_left = 1.0
+offset_top = 105.0
+offset_right = 1601.0
+offset_bottom = 802.0
+color = Color(0.384314, 0.509804, 0.866667, 1)
+
+[node name="gradient" type="TextureRect" parent="."]
+offset_left = 681.0
+offset_top = 180.0
+offset_right = 1303.0
+offset_bottom = 862.0
+rotation = 1.57256
+texture = SubResource("GradientTexture1D_76il0")
+
+[node name="welcome" type="TextureRect" parent="."]
+offset_left = 108.0
+offset_top = 294.0
+offset_right = 592.0
+offset_bottom = 473.0
+texture = ExtResource("1_2gkos")
+expand_mode = 1
+
+[node name="modele" type="TextureRect" parent="."]
+offset_left = 759.0
+offset_top = 573.0
+offset_right = 2322.0
+offset_bottom = 1463.0
+texture = ExtResource("2_4raw2")
+
+[node name="horizontal line" type="TextureRect" parent="."]
+offset_top = 105.0
+offset_right = 1600.0
+offset_bottom = 107.0
+texture = SubResource("GradientTexture1D_yym56")
+
+[node name="vertical line" type="TextureRect" parent="horizontal line"]
+layout_mode = 0
+offset_left = 679.0
+offset_top = 3.0
+offset_right = 1373.0
+offset_bottom = 6.0
+rotation = 1.57089
+texture = SubResource("GradientTexture1D_cmjru")
