@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b78y8nhrad6ag"]
+[gd_scene load_steps=4 format=3 uid="uid://b78y8nhrad6ag"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_ady3x"]
+[ext_resource type="ArrayMesh" uid="uid://dejducbp84efs" path="res://models/man/bonecoDeNeve.obj" id="2_8u743"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kcbxg"]
 
@@ -14,3 +15,7 @@ shape = SubResource("CapsuleShape3D_kcbxg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.015, 0, -1.31134e-09, 0, 0.015, 0, 1.31134e-09, 0, -0.015, 0, 0.402156, 0.746243)
+mesh = ExtResource("2_8u743")
