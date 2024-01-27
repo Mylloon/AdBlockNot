@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b78y8nhrad6ag"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_ady3x"]
-[ext_resource type="Shader" path="res://scenes/view.gdshader" id="2_7jxaq"]
+[ext_resource type="Shader" path="res://shaders/view.gdshader" id="2_7jxaq"]
 [ext_resource type="ArrayMesh" uid="uid://dejducbp84efs" path="res://models/man/bonecoDeNeve.obj" id="2_8u743"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kcbxg"]

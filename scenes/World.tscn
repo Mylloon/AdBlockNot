@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b78y8nhrad6ag" path="res://scenes/Player.tscn" id="1_r5ocp"]
 [ext_resource type="ArrayMesh" uid="uid://dxfoqqm2nloti" path="res://models/desktop/bureau3.obj" id="2_b86p5"]
 [ext_resource type="ArrayMesh" uid="uid://ryvqneyivql2" path="res://models/bed/lettoAzzurro.obj" id="3_yfdxs"]
-[ext_resource type="ArrayMesh" uid="uid://ctrw34ahl0147" path="res://models/ceilinglight/hangingLight.obj" id="4_1tc5e"]
+[ext_resource type="ArrayMesh" uid="uid://ctrw34ahl0147" path="res://models/plafonnier/hangingLight.obj" id="4_1tc5e"]
 [ext_resource type="ArrayMesh" uid="uid://locruss302l4" path="res://models/computer/tourPC.obj" id="5_focw6"]
 [ext_resource type="ArrayMesh" uid="uid://bdf0r6v8c0i3u" path="res://models/computer/monitorLCD.obj" id="5_mfc80"]
 [ext_resource type="ArrayMesh" uid="uid://dtxl74y7beunj" path="res://models/computer/clavier.obj" id="5_ue750"]
