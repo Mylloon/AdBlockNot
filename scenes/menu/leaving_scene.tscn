@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvvrnoynem37o"]
+
+[ext_resource type="Script" path="res://scenes/menu/leaving_scene.gd" id="1_a1d13"]
+[ext_resource type="Texture2D" uid="uid://dpthky7yki0m2" path="res://models/menu/on_off.png" id="1_gqpbm"]
+[ext_resource type="AudioStream" uid="uid://bnjm7gcfox6aj" path="res://ressources/sounds/menu/Microsoft Windows 98 Shutdown Sound.mp3" id="3_osush"]
+
+[sub_resource type="Animation" id="Animation_xvmmj"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade_out/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kw5my"]
+_data = {
+"fade_out": SubResource("Animation_xvmmj")
+}
+
+[node name="LeavingScene" type="Node2D"]
+script = ExtResource("1_a1d13")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1604.0
+offset_bottom = 897.0
+texture = ExtResource("1_gqpbm")
+expand_mode = 1
+
+[node name="Timer_leave" type="Timer" parent="."]
+process_callback = 0
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="off_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_osush")
+
+[node name="Timer_fade" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Fade_out" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kw5my")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Fade_out"]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 1621.0
+offset_bottom = 919.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="timeout" from="Timer_leave" to="." method="_on_timer_leave_timeout"]
+[connection signal="timeout" from="Timer_fade" to="." method="_on_timer_fade_timeout"]
