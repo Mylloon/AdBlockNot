@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dtxl74y7beunj"
+path="res://.godot/imported/clavier.obj-ad06773204c1414fcbd4ed02064ea80d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/clavier.obj-ad06773204c1414fcbd4ed02064ea80d.mesh"]
+
+source_file="res://models/computer/clavier.obj"
+dest_files=["res://.godot/imported/clavier.obj-ad06773204c1414fcbd4ed02064ea80d.mesh", "res://.godot/imported/clavier.obj-ad06773204c1414fcbd4ed02064ea80d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bdf0r6v8c0i3u"
+path="res://.godot/imported/monitorLCD.obj-6242de27796fa19044b2d54f5c00227c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/monitorLCD.obj-6242de27796fa19044b2d54f5c00227c.mesh"]
+
+source_file="res://models/computer/monitorLCD.obj"
+dest_files=["res://.godot/imported/monitorLCD.obj-6242de27796fa19044b2d54f5c00227c.mesh", "res://.godot/imported/monitorLCD.obj-6242de27796fa19044b2d54f5c00227c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

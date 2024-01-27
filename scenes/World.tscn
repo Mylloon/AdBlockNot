@@ -1,9 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://dc0cngrxpqgyh"]
+[gd_scene load_steps=16 format=3 uid="uid://dc0cngrxpqgyh"]
 
 [ext_resource type="PackedScene" uid="uid://b78y8nhrad6ag" path="res://scenes/Player.tscn" id="1_r5ocp"]
 [ext_resource type="ArrayMesh" uid="uid://dxfoqqm2nloti" path="res://models/desktop/bureau3.obj" id="2_b86p5"]
 [ext_resource type="ArrayMesh" uid="uid://ryvqneyivql2" path="res://models/bed/lettoAzzurro.obj" id="3_yfdxs"]
-[ext_resource type="ArrayMesh" uid="uid://ctrw34ahl0147" path="res://models/plafonnier/hangingLight.obj" id="4_2fyg0"]
+[ext_resource type="ArrayMesh" uid="uid://ctrw34ahl0147" path="res://models/ceilinglight/hangingLight.obj" id="4_e1pay"]
+[ext_resource type="ArrayMesh" uid="uid://locruss302l4" path="res://models/computer/tourPC.obj" id="5_focw6"]
+[ext_resource type="ArrayMesh" uid="uid://bdf0r6v8c0i3u" path="res://models/computer/monitorLCD.obj" id="5_mfc80"]
+[ext_resource type="ArrayMesh" uid="uid://dtxl74y7beunj" path="res://models/computer/clavier.obj" id="5_ue750"]
+[ext_resource type="ArrayMesh" uid="uid://co1pd1a6qsg4p" path="res://models/computer/souris.obj" id="6_k6vns"]
+[ext_resource type="ArrayMesh" uid="uid://b8yh3qieisvgs" path="res://models/chair/chair.obj" id="9_len63"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_vfc5y"]
 size = Vector2(10, 10)
@@ -103,16 +108,44 @@ shape = SubResource("BoxShape3D_fvwov")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4, 0)
 size = Vector3(10, 10, 0.1)
 
-[node name="Plafonnier" type="Node3D" parent="."]
+[node name="CeillingLight" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185498, 3, -2.68985)
 
-[node name="HangingLight" type="MeshInstance3D" parent="Plafonnier"]
+[node name="HangingLight" type="MeshInstance3D" parent="CeillingLight"]
 transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
-mesh = ExtResource("4_2fyg0")
+mesh = ExtResource("4_e1pay")
 skeleton = NodePath("../..")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Plafonnier"]
+[node name="SpotLight3D" type="SpotLight3D" parent="CeillingLight"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 shadow_enabled = true
 spot_range = 7.807
 spot_angle = 38.57
+
+[node name="SetupGaming" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02288, -3.54164)
+
+[node name="TourPc" type="MeshInstance3D" parent="SetupGaming"]
+transform = Transform3D(0.175129, 0, 0.106559, 0, 0.205, 0, -0.106559, 0, 0.175129, 0.85583, 0.31505, -0.124053)
+mesh = ExtResource("5_focw6")
+skeleton = NodePath("../..")
+
+[node name="MonitorLcd" type="MeshInstance3D" parent="SetupGaming"]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -0.0782957, 0.736201, 0.837431)
+mesh = ExtResource("5_mfc80")
+skeleton = NodePath("../..")
+
+[node name="Souris" type="MeshInstance3D" parent="SetupGaming"]
+transform = Transform3D(-2.18557e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.18557e-09, 0.665008, 0.0434707, 0.187065)
+mesh = ExtResource("6_k6vns")
+skeleton = NodePath("../..")
+
+[node name="Clavier" type="MeshInstance3D" parent="SetupGaming"]
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 0, -0.0699072, 0.223786)
+mesh = ExtResource("5_ue750")
+skeleton = NodePath("../..")
+
+[node name="Chair" type="MeshInstance3D" parent="SetupGaming"]
+transform = Transform3D(-0.0362347, 0, -0.13523, 0, 0.14, 0, 0.13523, 0, -0.0362347, 0.828688, -0.377238, 0.846272)
+mesh = ExtResource("9_len63")
+skeleton = NodePath("../..")
