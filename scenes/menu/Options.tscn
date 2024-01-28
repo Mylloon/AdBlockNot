@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://scenes/menu/Options.gd" id="1_tx7kc"]
 [ext_resource type="AudioStream" uid="uid://c5fgxh51yhon8" path="res://ressources/sounds/menu/Microsoft Windows 98 Startup Sound .mp3" id="2_5ip4v"]
-[ext_resource type="Texture2D" uid="uid://bbya0vp0ejqa3" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Slider_Handle.png" id="2_p7hne"]
+[ext_resource type="Texture2D" uid="uid://u2x6uq3f3m6o" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Slider_Handle.png" id="2_p7hne"]
 [ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="3_4rmnw"]
-[ext_resource type="Texture2D" uid="uid://jllu46doutf8" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Toggle_Inactive.png" id="4_eh3gv"]
-[ext_resource type="Texture2D" uid="uid://4te31qkwkrkc" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Toggle_Selected.png" id="5_3ikpl"]
-[ext_resource type="AudioStream" uid="uid://msnondptwiya" path="res://ressources/sounds/menu/miaou.mp3" id="7_r1icc"]
+[ext_resource type="Texture2D" uid="uid://bbknd7dtrhq4t" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Toggle_Inactive.png" id="4_eh3gv"]
+[ext_resource type="Texture2D" uid="uid://bbqweh5x7ufg2" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Toggle_Selected.png" id="5_3ikpl"]
+[ext_resource type="AudioStream" uid="uid://b6r8lvskuu228" path="res://ressources/sounds/menu/miaou.mp3" id="7_r1icc"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_l4bn6"]
 content_margin_left = 0.0
@@ -91,7 +91,7 @@ offset_right = 524.0
 offset_bottom = 76.0
 theme_override_fonts/font = ExtResource("3_4rmnw")
 theme_override_font_sizes/font_size = 20
-text = "Test"
+text = "Tester"
 
 [node name="Music" type="Node2D" parent="VBoxContainer"]
 position = Vector2(251, 173)
@@ -145,7 +145,7 @@ offset_right = 510.0
 offset_bottom = 78.0
 theme_override_fonts/font = ExtResource("3_4rmnw")
 theme_override_font_sizes/font_size = 20
-text = "Test"
+text = "Tester"
 
 [node name="Master2" type="Node2D" parent="VBoxContainer"]
 position = Vector2(237, 114)
@@ -195,7 +195,7 @@ offset_right = 525.0
 offset_bottom = 78.0
 theme_override_fonts/font = ExtResource("3_4rmnw")
 theme_override_font_sizes/font_size = 20
-text = "Test"
+text = "Tester"
 
 [node name="Node2D" type="Node2D" parent="VBoxContainer"]
 position = Vector2(237, 334)

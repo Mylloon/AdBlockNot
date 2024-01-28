@@ -16,7 +16,7 @@ func _change_volume(bus, value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(bus),value)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 #Slider
