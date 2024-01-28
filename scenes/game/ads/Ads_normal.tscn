@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://wo0ujdthnlrb"]
+
+[ext_resource type="PackedScene" uid="uid://n06gkookqeml" path="res://scenes/game/windows/Ads.tscn" id="1_6ucwo"]
+[ext_resource type="Script" path="res://scripts/ads/Ads_normal.gd" id="2_usogt"]
+
+[node name="Windows" instance=ExtResource("1_6ucwo")]
+script = ExtResource("2_usogt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="2"]
+position = Vector2(10, 53)
+scale = Vector2(0.4, 0.34)
