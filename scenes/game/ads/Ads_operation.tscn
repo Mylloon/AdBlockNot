@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3qlt4pa4qbji"]
+
+[ext_resource type="PackedScene" uid="uid://n06gkookqeml" path="res://scenes/game/windows/Ads.tscn" id="1_2b68r"]
+[ext_resource type="Script" path="res://scripts/ads/ads_operation.gd" id="2_jop1v"]
+
+[node name="Windows" instance=ExtResource("1_2b68r")]
+script = ExtResource("2_jop1v")
