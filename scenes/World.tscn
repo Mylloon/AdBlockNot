@@ -188,8 +188,9 @@ transform = Transform3D(1, 0, 0, 0, -0.0303117, 0.999541, 0, -0.999541, -0.03031
 light_color = Color(0.992157, 0.960784, 0.929412, 1)
 light_energy = 6.283
 shadow_enabled = true
-spot_range = 7.807
-spot_angle = 70.42
+spot_range = 14.66
+spot_angle = 78.93
+spot_angle_attenuation = 0.406126
 
 [node name="Desktop" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.015, 0, 0, 0, 0.015, 0, 0, 0, 0.015, 0.145715, 0.531814, -3.61084)
