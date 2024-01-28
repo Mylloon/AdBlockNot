@@ -8,4 +8,4 @@ func _physics_process(_delta):
 		if get_collider() is Interactable:
 			prompt.set_text("Regarder un film sur www3.yggtorrent.qa")
 			if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-				get_tree().change_scene_to_file("res://Scenes/menu/go_in.tscn")
+				get_tree().change_scene_to_file("res://scenes/menu/go_in.tscn")

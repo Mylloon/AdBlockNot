@@ -28,7 +28,6 @@ func _on_options_pressed():
 	$Menu/Options/Rules.set_visible(true)
 	pass # Replace with function body.
 
-
 func _on_close_pressed():
 	$Menu/Options/Rules.set_visible(false)
 	pass # Replace with function body.
