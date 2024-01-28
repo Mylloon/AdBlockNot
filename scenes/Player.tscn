@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b78y8nhrad6ag"]
+[gd_scene load_steps=8 format=3 uid="uid://b78y8nhrad6ag"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_ady3x"]
 [ext_resource type="Shader" path="res://shaders/view.gdshader" id="2_7jxaq"]
 [ext_resource type="ArrayMesh" uid="uid://dejducbp84efs" path="res://models/man/bonecoDeNeve.obj" id="2_8u743"]
+[ext_resource type="Script" path="res://scripts/PlayerInteraction.gd" id="3_cbjgo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kcbxg"]
 
@@ -28,6 +29,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.216)
 mesh = SubResource("PlaneMesh_g0wf5")
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+target_position = Vector3(0, 0, -2)
+script = ExtResource("3_cbjgo")
+
+[node name="Label" type="Label" parent="Head/Camera3D/RayCast3D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -11.5
+offset_right = 50.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.015, 0, -1.31134e-09, 0, 0.015, 0, 1.31134e-09, 0, -0.015, 0, 0.402156, 0.746243)
