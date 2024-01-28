@@ -141,5 +141,7 @@ theme_override_font_sizes/font_size = 46
 [node name="Rules" parent="." instance=ExtResource("8_fvukt")]
 visible = false
 z_index = 4096
+position = Vector2(395, 92)
+scale = Vector2(1, 1)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

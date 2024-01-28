@@ -263,24 +263,20 @@ offset_top = 606.0
 offset_right = 171.0
 offset_bottom = 636.0
 theme_type_variation = &"FlatButton"
-
-[node name="p_off" type="TextureRect" parent="Power off"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = -3.0
-offset_right = 43.0
-offset_bottom = 32.0
-expand_mode = 1
-
-[node name="Label" type="Label" parent="Power off"]
-layout_mode = 0
-offset_left = 49.0
-offset_top = 2.0
-offset_right = 138.0
-offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.403922, 0.403922, 0.403922, 1)
+theme_override_colors/font_hover_color = Color(0.560784, 0.560784, 0.560784, 1)
 theme_override_fonts/font = ExtResource("4_mm1sy")
 theme_override_font_sizes/font_size = 24
-text = "Menu"
+text = "Retour Menu"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 17.0
+offset_top = 12.0
+offset_right = 407.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("4_mm1sy")
+theme_override_font_sizes/font_size = 41
+text = "regedit.cfg"
 
 [connection signal="pressed" from="Node2D/Op/Help_panel/Help icon/Button_hlp" to="." method="_on_button_hlp_pressed"]
 [connection signal="pressed" from="Node2D/Node2D/options icon/Button_opt" to="." method="_on_button_opt_pressed"]
