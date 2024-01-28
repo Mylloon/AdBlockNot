@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ur6erv76d2of"]
+[gd_scene load_steps=16 format=3 uid="uid://ur6erv76d2of"]
 
 [ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="1_7ecbr"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_orxmr"]
@@ -9,7 +9,7 @@
 [ext_resource type="Shader" path="res://shaders/oldscreen.gdshader" id="6_7ta02"]
 [ext_resource type="PackedScene" uid="uid://b4ujwtugvmurm" path="res://scenes/game/windows/Video_page.tscn" id="7_3mlyk"]
 [ext_resource type="PackedScene" uid="uid://d0o3thrvt3ecx" path="res://scenes/menu/rules.tscn" id="8_fvukt"]
-[ext_resource type="AudioStream" uid="uid://cm4byed2qt10u" path="res://ressources/sounds/AdBlockNot.wav" id="9_j4hp8"]
+[ext_resource type="AudioStream" uid="uid://cjnulxaww6ej5" path="res://ressources/sounds/AdBlockNot.wav" id="9_j4hp8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_se4f0"]
 bg_color = Color(0.764706, 0.764706, 0.764706, 1)

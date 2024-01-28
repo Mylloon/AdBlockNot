@@ -46,8 +46,13 @@ func new_ads():
 
 # Called when the node enters the scene tree for the first time.
 func load_scene():
-	var _ads_scene = getFilePathsByExtension("res://scenes/game/ads", "tscn")
-	for scene in _ads_scene:
+	for scene in [ "res://scenes/game/ads/ads_music.tscn"
+				 , "res://scenes/game/ads/ads_normal.tscn"
+				 , "res://scenes/game/ads/ads_operation.tscn"
+				 , "res://scenes/game/ads/ads_pair.tscn"
+				 , "res://scenes/game/ads/ads_roll.tscn"
+				 , "res://scenes/game/ads/ads_sexy_robot.tscn"
+				 , "res://scenes/game/ads/ads_weather.tscn" ]:
 		ads_scene.push_back(load(scene))
 
 func _input(event):
