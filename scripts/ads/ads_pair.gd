@@ -57,7 +57,7 @@ func _on_pressed(num):
 		hold[0] = num
 
 	# Verification
-	condition = hold[0] == correct[0] and hold[1] == correct[1]
+	condition = hold[0] == correct[0] and hold[1] == correct[1] or hold[1] == correct[0] and hold[0] == correct[1]
 	
 	# Alternation
 	alterne = !alterne

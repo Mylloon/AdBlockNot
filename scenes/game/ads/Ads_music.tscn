@@ -29,6 +29,7 @@ flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
 stream = ExtResource("5_gf3d2")
+volume_db = 24.0
 bus = &"SFX"
 
 [connection signal="pressed" from="MusicButton/Button" to="." method="_on_button2_pressed"]
