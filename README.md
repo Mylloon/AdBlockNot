@@ -6,6 +6,8 @@
   </a>
 </p>
 
+[Page itch.io](https://21-12exe.itch.io/adblocknot)
+
 ## Crédits
 
 Voir les [crédits](./CREDITS).
