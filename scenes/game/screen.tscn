@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ur6erv76d2of"]
+[gd_scene load_steps=13 format=3 uid="uid://ur6erv76d2of"]
 
 [ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="1_7ecbr"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_orxmr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ca0n6csxw7yd7" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Pressed.png" id="3_eb8po"]
 [ext_resource type="Texture2D" uid="uid://c1s8gaui8k13h" path="res://models/RetroWindowsGUI/Flag.png" id="4_medxy"]
 [ext_resource type="Shader" path="res://shaders/oldscreen.gdshader" id="6_7ta02"]
+[ext_resource type="PackedScene" uid="uid://b4ujwtugvmurm" path="res://scenes/game/windows/Video_page.tscn" id="7_3mlyk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_se4f0"]
 bg_color = Color(0.764706, 0.764706, 0.764706, 1)
@@ -102,3 +103,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="VideoPage" parent="." instance=ExtResource("7_3mlyk")]
+layout_mode = 1
+offset_left = 96.0
+offset_top = 89.0
+offset_right = -450.0
+offset_bottom = -104.0
