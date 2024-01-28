@@ -13,6 +13,9 @@ enum OP {
 var reponse
 
 func _ready():
+	new_game()
+
+func new_game():
 	var a := randi_range(0, 9)
 	var b := randi_range(0, 9)
 	
@@ -28,7 +31,7 @@ func _ready():
 			operator = "-"
 		OP.MUL:
 			reponse = a * b
-			operator = "*"
+			operator = "x"
 	
 	question.text = str(str(a), " ", operator, " " , str(b))
 	
@@ -41,7 +44,13 @@ func exit_condition():
 	return condition
 
 func _on_button_1_pressed():
-	condition = int(responseA.text) == reponse
+	check(int(responseA.text))
 
 func _on_button_2_pressed():
-	condition = int(responseB.text) == reponse
+	check(int(responseB.text))
+
+func check(data):
+	if data == reponse:
+		condition = true
+	else:
+		new_game()

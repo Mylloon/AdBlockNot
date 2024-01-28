@@ -5,12 +5,10 @@ var condition = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
-	
 
-	
 func exit_condition():
 	return condition
-	
+
 func close():
 	if exit_condition():
 		self.visible = false
