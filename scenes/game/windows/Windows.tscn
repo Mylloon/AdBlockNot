@@ -1,10 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://n06gkookqeml"]
+[gd_scene load_steps=15 format=3 uid="uid://dcgug7ahuk1cj"]
 
 [ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="1_3xpen"]
 [ext_resource type="Shader" path="res://shaders/oldscreen.gdshader" id="1_dy2m7"]
-[ext_resource type="Texture2D" uid="uid://c012k8qiyjn4a" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="2_cdjsi"]
-[ext_resource type="Texture2D" uid="uid://rryuulwvlsqi" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Inactive.png" id="3_2cafe"]
-[ext_resource type="Texture2D" uid="uid://ca0n6csxw7yd7" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Pressed.png" id="4_aprk7"]
+[ext_resource type="Texture2D" uid="uid://ctjbrbheokvw2" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="2_cdjsi"]
+[ext_resource type="Texture2D" uid="uid://1co7ffdrtbx2" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Inactive.png" id="3_2cafe"]
+[ext_resource type="Texture2D" uid="uid://djpnk4h30pvtr" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Pressed.png" id="4_aprk7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16my3"]
 bg_color = Color(0.831373, 0.815686, 0.784314, 1)
@@ -18,11 +18,11 @@ border_color = Color(0.686275, 0.662745, 0.619608, 1)
 offsets = PackedFloat32Array(0, 0.396624)
 colors = PackedColorArray(0, 0, 0.501961, 1, 1, 1, 1, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_n5gkc"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_pb0qd"]
 gradient = SubResource("Gradient_qyjym")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_54rle"]
-texture = SubResource("GradientTexture1D_n5gkc")
+texture = SubResource("GradientTexture1D_pb0qd")
 texture_margin_left = 3.27016
 texture_margin_top = 4.41471
 texture_margin_right = 0.654032

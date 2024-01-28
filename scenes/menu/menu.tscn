@@ -1,15 +1,73 @@
-[gd_scene load_steps=6 format=3 uid="uid://do6hgdpuwfsmf"]
+[gd_scene load_steps=15 format=3 uid="uid://do6hgdpuwfsmf"]
 
 [ext_resource type="PackedScene" uid="uid://cgdlh6iv2j7we" path="res://scenes/menu/image_menu.tscn" id="1_f4wvw"]
 [ext_resource type="Script" path="res://scenes/menu/menu.gd" id="1_y4d58"]
-[ext_resource type="Texture2D" uid="uid://bcqdrfm52esft" path="res://models/menu/power_off.png" id="2_4yhxu"]
-[ext_resource type="Texture2D" uid="uid://plpafbpfkjd7" path="res://models/menu/PDP.png" id="3_a6fh8"]
 [ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="3_coatq"]
+[ext_resource type="Texture2D" uid="uid://dj2ksd67cmwfg" path="res://models/menu/icones/User.png" id="3_kh055"]
+[ext_resource type="Texture2D" uid="uid://dpnvh4lt28eb" path="res://models/menu/icones/Infinite.png" id="5_bnbfr"]
+[ext_resource type="Texture2D" uid="uid://f1rkaxvylydr" path="res://models/menu/icones/Options.png" id="6_1ofa3"]
+[ext_resource type="PackedScene" uid="uid://d0o3thrvt3ecx" path="res://scenes/menu/rules.tscn" id="7_bv273"]
+[ext_resource type="Texture2D" uid="uid://ctjbrbheokvw2" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="8_igvbm"]
+[ext_resource type="Texture2D" uid="uid://1co7ffdrtbx2" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Inactive.png" id="9_npqtf"]
+[ext_resource type="Texture2D" uid="uid://djpnk4h30pvtr" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Pressed.png" id="10_vrql1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mulaw"]
+texture = ExtResource("8_igvbm")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sbxpa"]
+texture = ExtResource("9_npqtf")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m56ur"]
+texture = ExtResource("10_vrql1")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tt12n"]
+texture = ExtResource("8_igvbm")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_y4d58")
 
 [node name="image_menu" parent="." instance=ExtResource("1_f4wvw")]
+
+[node name="Power off" type="Button" parent="."]
+offset_left = 46.0
+offset_top = 828.0
+offset_right = 183.0
+offset_bottom = 858.0
+theme_type_variation = &"FlatButton"
+
+[node name="p_off" type="TextureRect" parent="Power off"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -3.0
+offset_right = 43.0
+offset_bottom = 32.0
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Power off"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 2.0
+offset_right = 138.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_coatq")
+theme_override_font_sizes/font_size = 24
+text = "Power off"
 
 [node name="Menu" type="VBoxContainer" parent="."]
 offset_left = 915.0
@@ -18,7 +76,6 @@ offset_right = 1163.0
 offset_bottom = 433.0
 scale = Vector2(1.83, 1.83)
 theme_override_constants/separation = 29
-alignment = 1
 
 [node name="NormalStart" type="Button" parent="Menu"]
 layout_mode = 2
@@ -31,10 +88,19 @@ offset_left = 1.0929
 offset_top = -5.46448
 offset_right = 41.0929
 offset_bottom = 34.5355
-texture = ExtResource("3_a6fh8")
+texture = ExtResource("3_kh055")
 expand_mode = 1
 
+[node name="Panel" type="Panel" parent="Menu/NormalStart/pdp1"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 41.0
+offset_bottom = 41.0
+
 [node name="Label" type="Label" parent="Menu/NormalStart"]
+layout_mode = 0
 offset_left = 49.0
 offset_top = 2.0
 offset_right = 138.0
@@ -49,13 +115,23 @@ theme_type_variation = &"FlatButton"
 text = " "
 
 [node name="pdp2" type="TextureRect" parent="Menu/InfiniteStart"]
+layout_mode = 0
 offset_top = -4.26229
 offset_right = 40.0
 offset_bottom = 35.7377
-texture = ExtResource("3_a6fh8")
+texture = ExtResource("5_bnbfr")
 expand_mode = 1
 
+[node name="Panel" type="Panel" parent="Menu/InfiniteStart/pdp2"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 41.0
+offset_bottom = 41.0
+
 [node name="Label" type="Label" parent="Menu/InfiniteStart"]
+layout_mode = 0
 offset_left = 49.0
 offset_top = 2.0
 offset_right = 138.0
@@ -71,14 +147,24 @@ text = "
 "
 
 [node name="pdp3" type="TextureRect" parent="Menu/Options"]
+layout_mode = 0
 offset_left = 1.0929
 offset_top = -4.69944
 offset_right = 41.0929
 offset_bottom = 35.3006
-texture = ExtResource("3_a6fh8")
+texture = ExtResource("6_1ofa3")
 expand_mode = 1
 
+[node name="Panel" type="Panel" parent="Menu/Options/pdp3"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 41.0
+offset_bottom = 41.0
+
 [node name="Label" type="Label" parent="Menu/Options"]
+layout_mode = 0
 offset_left = 49.0
 offset_top = 2.0
 offset_right = 138.0
@@ -87,33 +173,31 @@ theme_override_fonts/font = ExtResource("3_coatq")
 theme_override_font_sizes/font_size = 24
 text = "Options"
 
-[node name="Power off" type="Button" parent="."]
-offset_left = 46.0
-offset_top = 828.0
-offset_right = 183.0
-offset_bottom = 858.0
-theme_type_variation = &"FlatButton"
+[node name="Rules" parent="Menu/Options" instance=ExtResource("7_bv273")]
+position = Vector2(-286.885, -221.093)
 
-[node name="p_off" type="TextureRect" parent="Power off"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = -3.0
-offset_right = 43.0
-offset_bottom = 32.0
-texture = ExtResource("2_4yhxu")
-expand_mode = 1
-
-[node name="Label" type="Label" parent="Power off"]
-layout_mode = 0
-offset_left = 49.0
-offset_top = 2.0
-offset_right = 138.0
-offset_bottom = 28.0
+[node name="close" type="Button" parent="Menu/Options/Rules"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 786.885
+offset_top = 13.115
+offset_right = 820.885
+offset_bottom = 49.115
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0.0392157, 1)
 theme_override_fonts/font = ExtResource("3_coatq")
-theme_override_font_sizes/font_size = 24
-text = "Power off"
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_mulaw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sbxpa")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m56ur")
+theme_override_styles/focus = SubResource("StyleBoxTexture_tt12n")
+text = "X"
+icon_alignment = 1
+expand_icon = true
 
+[connection signal="pressed" from="Power off" to="." method="_on_power_off_pressed"]
 [connection signal="pressed" from="Menu/NormalStart" to="." method="_on_normal_start_pressed"]
 [connection signal="pressed" from="Menu/InfiniteStart" to="." method="_on_infinite_start_pressed"]
 [connection signal="pressed" from="Menu/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Power off" to="." method="_on_power_off_pressed"]
+[connection signal="pressed" from="Menu/Options/Rules/close" to="." method="_on_close_pressed"]
