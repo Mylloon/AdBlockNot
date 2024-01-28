@@ -10,7 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Gj 803z 2024"
+config/name="adBlockNot"
+config/description="Jeu produit lors de la Game Jam 64."
+config/version="1.0.0"
 run/main_scene="res://scenes/World.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
