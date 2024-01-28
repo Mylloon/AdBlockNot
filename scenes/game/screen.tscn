@@ -116,8 +116,8 @@ grow_vertical = 2
 layout_mode = 1
 offset_left = 96.0
 offset_top = 89.0
-offset_right = -450.0
-offset_bottom = -104.0
+offset_right = -459.0
+offset_bottom = -265.0
 
 [node name="Rules" parent="." instance=ExtResource("8_fvukt")]
 visible = false
