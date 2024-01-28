@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://bikwjtkpti0g4"]
+
+[ext_resource type="PackedScene" uid="uid://n06gkookqeml" path="res://scenes/game/windows/Ads.tscn" id="1_qk8kk"]
+[ext_resource type="Script" path="res://scripts/ads/ads_weather.gd" id="2_qi53i"]
+[ext_resource type="Texture2D" uid="uid://dvhevmohr428k" path="res://ressources/assets/Weather/Ads_Wallpaper.png" id="3_26kab"]
+
+[node name="Windows" instance=ExtResource("1_qk8kk")]
+script = ExtResource("2_qi53i")
+
+[node name="ColorRect2" parent="Panel2" index="0"]
+offset_left = -2.0
+offset_top = 0.0
+offset_right = -2.0
+offset_bottom = 354.0
+
+[node name="Fond" type="Sprite2D" parent="." index="2"]
+position = Vector2(250.5, 224)
+scale = Vector2(0.400833, 0.35)
+texture = ExtResource("3_26kab")
+
+[node name="GridContainer" type="GridContainer" parent="Fond" index="0"]
+offset_left = -573.0
+offset_top = -477.0
+offset_right = 619.0
+offset_bottom = 470.0
+scale = Vector2(1.245, 1.245)
+theme_override_constants/h_separation = 20
+columns = 3
+
+[node name="Image1" type="Button" parent="Fond/GridContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+flat = true
+
+[node name="Image2" type="Button" parent="Fond/GridContainer" index="1"]
+layout_mode = 2
+focus_mode = 0
+flat = true
+
+[node name="Image3" type="Button" parent="Fond/GridContainer" index="2"]
+layout_mode = 2
+focus_mode = 0
+flat = true
+
+[connection signal="pressed" from="Fond/GridContainer/Image1" to="." method="_on_pressed" binds= [1]]
+[connection signal="pressed" from="Fond/GridContainer/Image2" to="." method="_on_pressed" binds= [2]]
+[connection signal="pressed" from="Fond/GridContainer/Image3" to="." method="_on_pressed" binds= [3]]
