@@ -1,0 +1,287 @@
+[gd_scene load_steps=12 format=3 uid="uid://d0o3thrvt3ecx"]
+
+[ext_resource type="Texture2D" uid="uid://bx3exdw66656r" path="res://models/menu/icones/Help.png" id="1_5241r"]
+[ext_resource type="Script" path="res://scenes/menu/rules.gd" id="1_dl8bd"]
+[ext_resource type="Texture2D" uid="uid://f1rkaxvylydr" path="res://models/menu/icones/Options.png" id="2_3g6ce"]
+[ext_resource type="PackedScene" uid="uid://dqo1qk6m6stq4" path="res://scenes/menu/Options.tscn" id="3_ulvqu"]
+[ext_resource type="Shader" path="res://shaders/oldscreen.gdshader" id="3_x82uj"]
+[ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="4_mm1sy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxk8k"]
+bg_color = Color(0.831373, 0.815686, 0.784314, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.686275, 0.662745, 0.619608, 1)
+
+[sub_resource type="Gradient" id="Gradient_ytfaa"]
+offsets = PackedFloat32Array(0, 0.396624)
+colors = PackedColorArray(0, 0, 0.501961, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_u7ijh"]
+gradient = SubResource("Gradient_ytfaa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cb0n2"]
+texture = SubResource("GradientTexture1D_u7ijh")
+texture_margin_left = 3.27016
+texture_margin_top = 4.41471
+texture_margin_right = 0.654032
+region_rect = Rect2(0, -1.264, 45.529, 24.719)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ix0wl"]
+shader = ExtResource("3_x82uj")
+shader_parameter/SCREEN_HEIGHT = 240.0
+
+[node name="Rules" type="Node2D"]
+position = Vector2(580, 274)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_dl8bd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1212.0
+offset_top = -614.0
+offset_right = 2080.0
+offset_bottom = 1290.0
+color = Color(0.388235, 0.388235, 0.388235, 0.639216)
+
+[node name="Base" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 840.0
+offset_bottom = 647.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dxk8k")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Op" type="Node2D" parent="Node2D"]
+
+[node name="Help_panel" type="Panel" parent="Node2D/Op"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 106.0
+offset_top = 118.0
+offset_right = 786.0
+offset_bottom = 591.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dxk8k")
+
+[node name="valid_help" type="Panel" parent="Node2D/Op/Help_panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = 8.0
+offset_right = -676.0
+offset_bottom = -387.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dxk8k")
+
+[node name="Rect_visu2" type="ColorRect" parent="Node2D/Op/Help_panel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 233.0
+offset_right = 675.0
+offset_bottom = 468.0
+color = Color(0.388235, 0.388235, 0.388235, 0.419608)
+
+[node name="rules_normal" type="Label" parent="Node2D/Op/Help_panel/Rect_visu2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 9.0
+offset_right = 1276.0
+offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("4_mm1sy")
+theme_override_font_sizes/font_size = 21
+text = "Mode Infini :
+
+    Objectif : Survivre aussi longtemps que possible en fermant des publicités de plus 
+               en plus fréquentes et complexes.
+    Départ : Le joueur commence avec 10 publicités à fermer dans un délai de 45 secondes.
+    Augmentation de la difficulté : Si le joueur parvient à fermer toutes les publicités dans 
+              le délai imparti, le nombre de publicités augmente de 5 à chaque nouvelle série.
+    Limite de temps : Le joueur a 45 secondes pour fermer toutes les publicités. Si le joueur 
+              n'arrive pas à fermer toutes les publicités dans le temps imparti, le jeu se 
+              termine."
+
+[node name="rules_normal2" type="Label" parent="Node2D/Op/Help_panel/Rect_visu2"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 9.0
+offset_right = 1276.0
+offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("4_mm1sy")
+theme_override_font_sizes/font_size = 21
+text = "Mode Infini :
+
+    Objectif : Survivre aussi longtemps que possible en fermant des publicités de plus 
+               en plus fréquentes et complexes.
+    Départ : Le joueur commence avec 10 publicités à fermer dans un délai de 45 secondes.
+    Augmentation de la difficulté : Si le joueur parvient à fermer toutes les publicités dans 
+              le délai imparti, le nombre de publicités augmente de 5 à chaque nouvelle série.
+    Limite de temps : Le joueur a 45 secondes pour fermer toutes les publicités. Si le joueur 
+              n'arrive pas à fermer toutes les publicités dans le temps imparti, le jeu se 
+              termine."
+
+[node name="Help icon" type="TextureRect" parent="Node2D/Op/Help_panel"]
+layout_mode = 0
+offset_left = -72.0
+offset_top = 13.0
+offset_right = -1.0
+offset_bottom = 81.0
+texture = ExtResource("1_5241r")
+
+[node name="Button_hlp" type="Button" parent="Node2D/Op/Help_panel/Help icon"]
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 69.0
+focus_mode = 0
+flat = true
+
+[node name="Rect_visu" type="ColorRect" parent="Node2D/Op/Help_panel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 675.0
+offset_bottom = 222.0
+color = Color(0.388235, 0.388235, 0.388235, 0.419608)
+
+[node name="rules_normal" type="Label" parent="Node2D/Op/Help_panel/Rect_visu"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 9.0
+offset_right = 767.0
+offset_bottom = 214.0
+theme_override_fonts/font = ExtResource("4_mm1sy")
+theme_override_font_sizes/font_size = 21
+text = "Mode Normal :
+
+    Objectif : Fermer toutes les publicités avant la fin du temps imparti.
+    Niveaux :
+        Niveau 1 : 45 secondes pour fermer 10 les publicités.
+        Niveau 2 : 45 secondes pour fermer 15 plus rapidement et avec plus de difficulté.
+        Niveau 3 : 45 secondes pour affronter le défi ultime de la publicité en ligne: 25 pubs.
+    Mini-jeux : Chaque publicité ouvre un mini-jeu que le joueur doit terminer pour la fermer."
+
+[node name="Node2D" type="Node2D" parent="Node2D"]
+
+[node name="valid_options" type="Panel" parent="Node2D/Node2D"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = 203.0
+offset_right = 111.0
+offset_bottom = 281.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dxk8k")
+
+[node name="options icon" type="TextureRect" parent="Node2D/Node2D"]
+offset_left = 35.0
+offset_top = 208.0
+offset_right = 106.0
+offset_bottom = 276.0
+texture = ExtResource("2_3g6ce")
+
+[node name="Button_opt" type="Button" parent="Node2D/Node2D/options icon"]
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 70.0
+focus_mode = 0
+flat = true
+
+[node name="Options" type="Panel" parent="Node2D/Node2D"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 106.0
+offset_top = 117.0
+offset_right = 784.0
+offset_bottom = 592.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dxk8k")
+
+[node name="All_options" type="ColorRect" parent="Node2D/Node2D/Options"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 85.0
+offset_right = 663.0
+offset_bottom = 271.0
+color = Color(0.388235, 0.388235, 0.388235, 0.419608)
+
+[node name="Rect_visu" type="ColorRect" parent="Node2D/Node2D/Options/All_options"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 227.0
+offset_right = 641.0
+offset_bottom = 284.0
+color = Color(0.388235, 0.388235, 0.388235, 0.419608)
+
+[node name="Options" parent="Node2D/Node2D/Options/All_options" instance=ExtResource("3_ulvqu")]
+position = Vector2(-148, -121)
+
+[node name="Top" type="Panel" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 835.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_cb0n2")
+
+[node name="color top" type="ColorRect" parent="Top"]
+visible = false
+material = SubResource("ShaderMaterial_ix0wl")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 2.0
+offset_bottom = 582.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Power off" type="Button" parent="."]
+offset_left = 34.0
+offset_top = 606.0
+offset_right = 171.0
+offset_bottom = 636.0
+theme_type_variation = &"FlatButton"
+
+[node name="p_off" type="TextureRect" parent="Power off"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -3.0
+offset_right = 43.0
+offset_bottom = 32.0
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Power off"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 2.0
+offset_right = 138.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("4_mm1sy")
+theme_override_font_sizes/font_size = 24
+text = "Menu"
+
+[connection signal="pressed" from="Node2D/Op/Help_panel/Help icon/Button_hlp" to="." method="_on_button_hlp_pressed"]
+[connection signal="pressed" from="Node2D/Node2D/options icon/Button_opt" to="." method="_on_button_opt_pressed"]
+[connection signal="pressed" from="Power off" to="." method="_on_power_off_pressed"]

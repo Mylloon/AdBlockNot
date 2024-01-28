@@ -1,3 +1,242 @@
-[gd_scene format=3 uid="uid://dqo1qk6m6stq4"]
+[gd_scene load_steps=11 format=3 uid="uid://dqo1qk6m6stq4"]
+
+[ext_resource type="Script" path="res://scenes/menu/Options.gd" id="1_tx7kc"]
+[ext_resource type="AudioStream" uid="uid://c5fgxh51yhon8" path="res://ressources/sounds/menu/Microsoft Windows 98 Startup Sound .mp3" id="2_5ip4v"]
+[ext_resource type="Texture2D" uid="uid://bbya0vp0ejqa3" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Slider_Handle.png" id="2_p7hne"]
+[ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="3_4rmnw"]
+[ext_resource type="Texture2D" uid="uid://jllu46doutf8" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Toggle_Inactive.png" id="4_eh3gv"]
+[ext_resource type="Texture2D" uid="uid://4te31qkwkrkc" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Toggle_Selected.png" id="5_3ikpl"]
+[ext_resource type="AudioStream" uid="uid://msnondptwiya" path="res://ressources/sounds/menu/miaou.mp3" id="7_r1icc"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_l4bn6"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+color = Color(0.505882, 0.505882, 0.505882, 1)
+thickness = 10
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_up0cd"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+color = Color(0.505882, 0.505882, 0.505882, 1)
+thickness = 10
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_i5gt4"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+color = Color(0.505882, 0.505882, 0.505882, 1)
+thickness = 10
 
 [node name="Options" type="Node2D"]
+script = ExtResource("1_tx7kc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 4.0
+offset_top = -20.0
+offset_right = 44.0
+offset_bottom = 20.0
+
+[node name="SFX_node" type="Node2D" parent="VBoxContainer"]
+position = Vector2(237, 235)
+
+[node name="Mute_SFX" type="Button" parent="VBoxContainer/SFX_node"]
+offset_left = 448.0
+offset_top = 53.0
+offset_right = 468.0
+offset_bottom = 73.0
+
+[node name="unchecked" type="TextureRect" parent="VBoxContainer/SFX_node/Mute_SFX"]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("4_eh3gv")
+
+[node name="checked" type="TextureRect" parent="VBoxContainer/SFX_node/Mute_SFX/unchecked"]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("5_3ikpl")
+
+[node name="SFX label" type="Label" parent="VBoxContainer/SFX_node"]
+offset_left = -44.0
+offset_top = 50.0
+offset_right = -4.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("3_4rmnw")
+theme_override_font_sizes/font_size = 20
+text = "SFX"
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/SFX_node"]
+offset_left = 29.0
+offset_top = 38.0
+offset_right = 425.0
+offset_bottom = 88.0
+theme_override_icons/grabber = ExtResource("2_p7hne")
+theme_override_icons/grabber_highlight = ExtResource("2_p7hne")
+theme_override_styles/slider = SubResource("StyleBoxLine_l4bn6")
+min_value = -80.0
+max_value = 0.0
+
+[node name="miaou" type="AudioStreamPlayer2D" parent="VBoxContainer/SFX_node"]
+stream = ExtResource("7_r1icc")
+volume_db = 20.282
+bus = &"SFX"
+
+[node name="Button_SFX" type="Button" parent="VBoxContainer/SFX_node"]
+offset_left = 485.0
+offset_top = 50.0
+offset_right = 524.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("3_4rmnw")
+theme_override_font_sizes/font_size = 20
+text = "Test"
+
+[node name="Music" type="Node2D" parent="VBoxContainer"]
+position = Vector2(251, 173)
+
+[node name="Mute_Music" type="Button" parent="VBoxContainer/Music"]
+offset_left = 434.0
+offset_top = 54.0
+offset_right = 454.0
+offset_bottom = 74.0
+
+[node name="unchecked" type="TextureRect" parent="VBoxContainer/Music/Mute_Music"]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("4_eh3gv")
+
+[node name="checked" type="TextureRect" parent="VBoxContainer/Music/Mute_Music/unchecked"]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("5_3ikpl")
+
+[node name="Music label" type="Label" parent="VBoxContainer/Music"]
+offset_left = -58.0
+offset_top = 51.0
+offset_right = -12.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("3_4rmnw")
+theme_override_font_sizes/font_size = 20
+text = "Music"
+
+[node name="HSlider2" type="HSlider" parent="VBoxContainer/Music"]
+offset_left = 15.0
+offset_top = 39.0
+offset_right = 411.0
+offset_bottom = 89.0
+theme_override_icons/grabber = ExtResource("2_p7hne")
+theme_override_icons/grabber_highlight = ExtResource("2_p7hne")
+theme_override_styles/slider = SubResource("StyleBoxLine_up0cd")
+min_value = -80.0
+max_value = 0.0
+
+[node name="Music" type="AudioStreamPlayer2D" parent="VBoxContainer/Music"]
+stream = ExtResource("2_5ip4v")
+bus = &"Music"
+
+[node name="Button_Music" type="Button" parent="VBoxContainer/Music"]
+offset_left = 471.0
+offset_top = 52.0
+offset_right = 510.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("3_4rmnw")
+theme_override_font_sizes/font_size = 20
+text = "Test"
+
+[node name="Master2" type="Node2D" parent="VBoxContainer"]
+position = Vector2(237, 114)
+
+[node name="Mute_Master" type="Button" parent="VBoxContainer/Master2"]
+offset_left = 448.0
+offset_top = 55.0
+offset_right = 468.0
+offset_bottom = 75.0
+
+[node name="unchecked" type="TextureRect" parent="VBoxContainer/Master2/Mute_Master"]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("4_eh3gv")
+
+[node name="checked" type="TextureRect" parent="VBoxContainer/Master2/Mute_Master/unchecked"]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("5_3ikpl")
+
+[node name="Master label" type="Label" parent="VBoxContainer/Master2"]
+offset_left = -43.0
+offset_top = 51.0
+offset_right = 12.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("3_4rmnw")
+theme_override_font_sizes/font_size = 20
+text = "Master"
+
+[node name="HSlider3" type="HSlider" parent="VBoxContainer/Master2"]
+offset_left = 29.0
+offset_top = 40.0
+offset_right = 425.0
+offset_bottom = 90.0
+theme_override_icons/grabber = ExtResource("2_p7hne")
+theme_override_icons/grabber_highlight = ExtResource("2_p7hne")
+theme_override_styles/slider = SubResource("StyleBoxLine_i5gt4")
+min_value = -80.0
+max_value = 0.0
+
+[node name="Button" type="Button" parent="VBoxContainer/Master2"]
+offset_left = 486.0
+offset_top = 52.0
+offset_right = 525.0
+offset_bottom = 78.0
+theme_override_fonts/font = ExtResource("3_4rmnw")
+theme_override_font_sizes/font_size = 20
+text = "Test"
+
+[node name="Node2D" type="Node2D" parent="VBoxContainer"]
+position = Vector2(237, 334)
+
+[node name="Full_src" type="Button" parent="VBoxContainer/Node2D"]
+offset_left = 449.0
+offset_top = 55.0
+offset_right = 469.0
+offset_bottom = 75.0
+
+[node name="unchecked" type="TextureRect" parent="VBoxContainer/Node2D/Full_src"]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("4_eh3gv")
+
+[node name="checked" type="TextureRect" parent="VBoxContainer/Node2D/Full_src/unchecked"]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("5_3ikpl")
+
+[node name="Fullscreen" type="Label" parent="VBoxContainer/Node2D"]
+offset_left = -43.0
+offset_top = 51.0
+offset_right = 12.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("3_4rmnw")
+theme_override_font_sizes/font_size = 20
+text = "Fullscreen"
+
+[node name="test" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_5ip4v")
+
+[connection signal="pressed" from="VBoxContainer/SFX_node/Mute_SFX" to="." method="_on_mute_sfx_pressed"]
+[connection signal="value_changed" from="VBoxContainer/SFX_node/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/SFX_node/Button_SFX" to="." method="_on_button_sfx_pressed"]
+[connection signal="pressed" from="VBoxContainer/Music/Mute_Music" to="." method="_on_mute_music_pressed"]
+[connection signal="value_changed" from="VBoxContainer/Music/HSlider2" to="." method="_on_h_slider_2_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Music/Button_Music" to="." method="_on_button_music_pressed"]
+[connection signal="pressed" from="VBoxContainer/Master2/Mute_Master" to="." method="_on_mute_master_pressed"]
+[connection signal="value_changed" from="VBoxContainer/Master2/HSlider3" to="." method="_on_h_slider_3_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Master2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Node2D/Full_src" to="." method="_on_full_src_pressed"]
