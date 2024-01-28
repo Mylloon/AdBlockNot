@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://ur6erv76d2of"]
+[gd_scene load_steps=14 format=3 uid="uid://ur6erv76d2of"]
 
 [ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="1_7ecbr"]
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_orxmr"]
 [ext_resource type="Texture2D" uid="uid://c012k8qiyjn4a" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="2_j8eab"]
+[ext_resource type="Texture2D" uid="uid://dksppcu3bp4l3" path="res://scenes/game/wallpaper.png" id="2_phmal"]
 [ext_resource type="Texture2D" uid="uid://ca0n6csxw7yd7" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Pressed.png" id="3_eb8po"]
 [ext_resource type="Texture2D" uid="uid://c1s8gaui8k13h" path="res://models/RetroWindowsGUI/Flag.png" id="4_medxy"]
 [ext_resource type="Shader" path="res://shaders/oldscreen.gdshader" id="6_7ta02"]
@@ -57,6 +58,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0.45098, 0.509804, 1)
 
+[node name="Wallpaper" type="Sprite2D" parent="ColorRect"]
+position = Vector2(803, 422)
+scale = Vector2(1.77778, 1.66798)
+texture = ExtResource("2_phmal")
+
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 12
@@ -109,4 +115,4 @@ layout_mode = 1
 offset_left = 96.0
 offset_top = 89.0
 offset_right = -450.0
-offset_bottom = -104.0
+offset_bottom = -270.0
