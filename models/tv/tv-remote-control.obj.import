@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ck5oef8vjpfeg"
+path="res://.godot/imported/tv-remote-control.obj-86c7b5b3418faf7cd5e5b5c21d254cae.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tv-remote-control.obj-86c7b5b3418faf7cd5e5b5c21d254cae.mesh"]
+
+source_file="res://models/tv/tv-remote-control.obj"
+dest_files=["res://.godot/imported/tv-remote-control.obj-86c7b5b3418faf7cd5e5b5c21d254cae.mesh", "res://.godot/imported/tv-remote-control.obj-86c7b5b3418faf7cd5e5b5c21d254cae.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

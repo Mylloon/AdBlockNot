@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ek0p03r0p0a8"
+path="res://.godot/imported/fork.obj-e175272477d7e9f93b9eb1283117ca33.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fork.obj-e175272477d7e9f93b9eb1283117ca33.mesh"]
+
+source_file="res://models/fourchette/fork.obj"
+dest_files=["res://.godot/imported/fork.obj-e175272477d7e9f93b9eb1283117ca33.mesh", "res://.godot/imported/fork.obj-e175272477d7e9f93b9eb1283117ca33.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

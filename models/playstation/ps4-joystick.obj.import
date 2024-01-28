@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bse1hve1bpefc"
+path="res://.godot/imported/ps4-joystick.obj-85990a2ddd76fd8f734e0eee52d76fef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ps4-joystick.obj-85990a2ddd76fd8f734e0eee52d76fef.mesh"]
+
+source_file="res://models/playstation/ps4-joystick.obj"
+dest_files=["res://.godot/imported/ps4-joystick.obj-85990a2ddd76fd8f734e0eee52d76fef.mesh", "res://.godot/imported/ps4-joystick.obj-85990a2ddd76fd8f734e0eee52d76fef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

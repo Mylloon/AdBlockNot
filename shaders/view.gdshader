@@ -20,7 +20,7 @@ void fragment() {
 	ALBEDO = texture(SCREEN_TEXTURE, vec2(x,y)/VIEWPORT_SIZE).xyz;
 }
 
-//void light() {
+void light() {
 	// Called for every pixel for every light affecting the material.
 	// Uncomment to replace the default light processing function with this one.
-//}
+}
