@@ -31,4 +31,4 @@ flat = true
 stream = ExtResource("5_gf3d2")
 bus = &"SFX"
 
-[connection signal="pressed" from="MusicButton/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MusicButton/Button" to="." method="_on_button2_pressed"]

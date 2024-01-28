@@ -12,3 +12,7 @@ func exit_condition():
 
 func _on_button_pressed():
 	condition = true
+
+
+func _on_button2_pressed():
+	condition = true

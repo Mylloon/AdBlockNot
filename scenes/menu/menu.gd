@@ -5,7 +5,6 @@ extends Node2D
 func _ready():
 	$Menu/Options/Rules.set_visible(false)
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,13 +20,10 @@ func _on_normal_start_pressed():
 	pass # Replace with function body.
 
 func _on_infinite_start_pressed():
-	#get_tree().change_scene_to_file("")
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/game/screen.tscn")
 
 func _on_options_pressed():
 	$Menu/Options/Rules.set_visible(true)
-	pass # Replace with function body.
 
 func _on_close_pressed():
 	$Menu/Options/Rules.set_visible(false)
-	pass # Replace with function body.

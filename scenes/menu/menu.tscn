@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://do6hgdpuwfsmf"]
+[gd_scene load_steps=17 format=3 uid="uid://do6hgdpuwfsmf"]
 
 [ext_resource type="PackedScene" uid="uid://cgdlh6iv2j7we" path="res://scenes/menu/image_menu.tscn" id="1_f4wvw"]
 [ext_resource type="Script" path="res://scenes/menu/menu.gd" id="1_y4d58"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c012k8qiyjn4a" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="8_igvbm"]
 [ext_resource type="Texture2D" uid="uid://rryuulwvlsqi" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Inactive.png" id="9_npqtf"]
 [ext_resource type="Texture2D" uid="uid://ca0n6csxw7yd7" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Pressed.png" id="10_vrql1"]
+[ext_resource type="AudioStream" uid="uid://cm4byed2qt10u" path="res://ressources/sounds/AdBlockNot.wav" id="12_2l6cy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mulaw"]
 texture = ExtResource("8_igvbm")
@@ -227,6 +228,12 @@ theme_override_styles/focus = SubResource("StyleBoxTexture_tt12n")
 text = "X"
 icon_alignment = 1
 expand_icon = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_2l6cy")
+volume_db = -14.102
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Power off" to="." method="_on_power_off_pressed"]
 [connection signal="pressed" from="Menu/NormalStart" to="." method="_on_normal_start_pressed"]

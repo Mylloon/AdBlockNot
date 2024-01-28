@@ -50,6 +50,10 @@ func load_scene():
 	for scene in _ads_scene:
 		ads_scene.push_back(load(scene))
 
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		pass # todo one day ahah ^^
+		# $Rules.set_visible(true)
 
 func _ready():
 	load_scene()
@@ -65,5 +69,6 @@ func win():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if win():
-		pass
-		print("mettre écran victoire")
+		for n in 15:
+			new_ads()
+		# get_tree().change_scene_to_file("res://scenes/game/victoire.tscn")
