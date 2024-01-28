@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c012k8qiyjn4a" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="8_igvbm"]
 [ext_resource type="Texture2D" uid="uid://rryuulwvlsqi" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Inactive.png" id="9_npqtf"]
 [ext_resource type="Texture2D" uid="uid://ca0n6csxw7yd7" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Pressed.png" id="10_vrql1"]
-[ext_resource type="AudioStream" uid="uid://cm4byed2qt10u" path="res://ressources/sounds/AdBlockNot.wav" id="12_2l6cy"]
+[ext_resource type="AudioStream" uid="uid://cjnulxaww6ej5" path="res://ressources/sounds/AdBlockNot.wav" id="12_2l6cy"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mulaw"]
 texture = ExtResource("8_igvbm")
