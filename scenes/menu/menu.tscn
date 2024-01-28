@@ -81,6 +81,7 @@ theme_override_constants/separation = 29
 
 [node name="NormalStart" type="Button" parent="Menu"]
 layout_mode = 2
+focus_mode = 0
 theme_type_variation = &"FlatButton"
 text = " "
 
@@ -121,6 +122,7 @@ text = "Start"
 
 [node name="InfiniteStart" type="Button" parent="Menu"]
 layout_mode = 2
+focus_mode = 0
 theme_type_variation = &"FlatButton"
 text = " "
 
@@ -161,6 +163,7 @@ text = "Mode infini"
 
 [node name="Options" type="Button" parent="Menu"]
 layout_mode = 2
+focus_mode = 0
 theme_type_variation = &"FlatButton"
 text = "
 "
