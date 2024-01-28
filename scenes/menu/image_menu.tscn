@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgdlh6iv2j7we"]
+[gd_scene load_steps=8 format=3 uid="uid://cgdlh6iv2j7we"]
 
-[ext_resource type="Texture2D" uid="uid://bnd12xnq12mv3" path="res://models/menu/welcome.png" id="1_tgn7l"]
-[ext_resource type="Texture2D" path="res://models/menu/Capture d’écran du 2024-01-27 17-48-43.png" id="2_076k5"]
+[ext_resource type="Texture2D" uid="uid://dokls1btlk3hc" path="res://models/menu/welcome.png" id="1_tgn7l"]
 
 [sub_resource type="Gradient" id="Gradient_pacrk"]
 offsets = PackedFloat32Array(0.684524, 1)
@@ -60,7 +59,6 @@ offset_left = 14.0
 offset_top = 1076.0
 offset_right = 1577.0
 offset_bottom = 1966.0
-texture = ExtResource("2_076k5")
 
 [node name="horizontal line" type="TextureRect" parent="."]
 offset_top = 105.0

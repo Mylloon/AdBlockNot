@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bd6hvyj4335ye"]
 
 [ext_resource type="Script" path="res://scenes/menu/go_in.gd" id="1_fm2vx"]
-[ext_resource type="AudioStream" uid="uid://c5fgxh51yhon8" path="res://ressources/sounds/menu/Microsoft Windows 98 Startup Sound .mp3" id="3_ekahx"]
+
+[ext_resource type="Texture2D" uid="uid://0gd2ishr4j5x" path="res://models/menu/on_off.png" id="2_hmhtg"]
 
 [sub_resource type="Animation" id="Animation_ojx4i"]
 resource_name = "fade_in"

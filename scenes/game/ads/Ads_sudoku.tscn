@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://djap3t7qr0dje"]
+
+[ext_resource type="PackedScene" uid="uid://n06gkookqeml" path="res://scenes/game/windows/Ads.tscn" id="1_bmr11"]
+[ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="2_606ke"]
+[ext_resource type="Script" path="res://scripts/ads/ads_default.gd" id="2_w3vjc"]
+
+[node name="Windows" instance=ExtResource("1_bmr11")]
+script = ExtResource("2_w3vjc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="2"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 143.0
+offset_right = 270.0
+offset_bottom = 289.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_606ke")
+theme_override_font_sizes/normal_font_size = 61
+text = "sudoku"

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cbpuhqt8o7ry7"
+path="res://.godot/imported/playstation4.obj-a275e3b2cf60de95bad4d0a9248566bc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/playstation4.obj-a275e3b2cf60de95bad4d0a9248566bc.mesh"]
+
+source_file="res://models/playstation/playstation4.obj"
+dest_files=["res://.godot/imported/playstation4.obj-a275e3b2cf60de95bad4d0a9248566bc.mesh", "res://.godot/imported/playstation4.obj-a275e3b2cf60de95bad4d0a9248566bc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://dcgug7ahuk1cj"]
+[gd_scene load_steps=17 format=3 uid="uid://n06gkookqeml"]
 
-[ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="1_3xpen"]
-[ext_resource type="Shader" path="res://shaders/oldscreen.gdshader" id="1_dy2m7"]
-[ext_resource type="Texture2D" uid="uid://ctjbrbheokvw2" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="2_cdjsi"]
-[ext_resource type="Texture2D" uid="uid://1co7ffdrtbx2" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Inactive.png" id="3_2cafe"]
-[ext_resource type="Texture2D" uid="uid://djpnk4h30pvtr" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Pressed.png" id="4_aprk7"]
+[ext_resource type="Shader" path="res://shaders/oldscreen.gdshader" id="1_1y06m"]
+[ext_resource type="Script" path="res://scripts/ads.gd" id="1_ovuv8"]
+[ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="2_ak5sb"]
+[ext_resource type="Texture2D" uid="uid://c012k8qiyjn4a" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button.png" id="3_ydhup"]
+[ext_resource type="Texture2D" uid="uid://rryuulwvlsqi" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Inactive.png" id="4_qj5eb"]
+[ext_resource type="Texture2D" uid="uid://ca0n6csxw7yd7" path="res://models/RetroWindowsGUI/RetroWindowsGUI/Windows_Button_Pressed.png" id="5_kq6ex"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16my3"]
 bg_color = Color(0.831373, 0.815686, 0.784314, 1)
@@ -29,32 +30,39 @@ texture_margin_right = 0.654032
 region_rect = Rect2(0, -1.264, 45.529, 24.719)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y28d3"]
-shader = ExtResource("1_dy2m7")
+shader = ExtResource("1_1y06m")
 shader_parameter/SCREEN_HEIGHT = 240.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8aptj"]
-texture = ExtResource("2_cdjsi")
+texture = ExtResource("3_ydhup")
 texture_margin_left = 2.0
 texture_margin_top = 2.0
 texture_margin_right = 2.0
 texture_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dlla7"]
-texture = ExtResource("3_2cafe")
+texture = ExtResource("4_qj5eb")
 texture_margin_left = 2.0
 texture_margin_top = 2.0
 texture_margin_right = 2.0
 texture_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jwtvu"]
-texture = ExtResource("4_aprk7")
+texture = ExtResource("5_kq6ex")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0cval"]
+texture = ExtResource("4_qj5eb")
 texture_margin_left = 2.0
 texture_margin_top = 2.0
 texture_margin_right = 2.0
 texture_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mmcpo"]
-texture = ExtResource("2_cdjsi")
+texture = ExtResource("3_ydhup")
 texture_margin_left = 2.0
 texture_margin_top = 2.0
 texture_margin_right = 2.0
@@ -69,6 +77,7 @@ offset_right = -1100.0
 offset_bottom = -500.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ovuv8")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -114,12 +123,15 @@ offset_right = -4.0
 offset_bottom = 42.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0.0392157, 1)
-theme_override_fonts/font = ExtResource("1_3xpen")
+theme_override_fonts/font = ExtResource("2_ak5sb")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxTexture_8aptj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_dlla7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_jwtvu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0cval")
 theme_override_styles/focus = SubResource("StyleBoxTexture_mmcpo")
 text = "X"
 icon_alignment = 1
 expand_icon = true
+
+[connection signal="pressed" from="Panel2/Button" to="." method="_on_button_pressed"]
