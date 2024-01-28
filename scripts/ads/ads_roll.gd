@@ -5,8 +5,8 @@ extends "res://scripts/ads/ads_default.gd"
 @onready var label_right := $Dice/Right
 
 func _ready():
-	label_left.text  = "0"
-	label_right.text = "0"
+	label_left.text  = "?"
+	label_right.text = "?"
 
 func exit_condition():
 	return condition
@@ -18,4 +18,4 @@ func _on_button_pressed():
 	label_left.text  = str(left)
 	label_right.text = str(right)
 	
-	condition = left + right >= 5
+	condition = left + right >= 8
