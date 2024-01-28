@@ -64,55 +64,55 @@ mesh = ExtResource("3_yfdxs")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bed/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_oadjq")
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+[node name="Murs" type="CSGCombiner3D" parent="."]
 
-[node name="MurAvant" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -5)
+[node name="MurAvant" type="CSGBox3D" parent="Murs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -4.1842)
 size = Vector3(10, 4, 0.1)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="CSGCombiner3D/MurAvant"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Murs/MurAvant"]
 physics_material_override = SubResource("PhysicsMaterial_ospel")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGCombiner3D/MurAvant/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Murs/MurAvant/StaticBody3D"]
 shape = SubResource("BoxShape3D_fvwov")
 
-[node name="MurArriere" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 5)
+[node name="MurArriere" type="CSGBox3D" parent="Murs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2.93017)
 size = Vector3(10, 4, 0.1)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="CSGCombiner3D/MurArriere"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Murs/MurArriere"]
 physics_material_override = SubResource("PhysicsMaterial_ospel")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGCombiner3D/MurArriere/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Murs/MurArriere/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.226)
 shape = SubResource("BoxShape3D_fvwov")
 
-[node name="MurGauche" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 2, 0)
+[node name="MurGauche" type="CSGBox3D" parent="Murs"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.01892, 2, 0)
 size = Vector3(10, 4, 0.1)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="CSGCombiner3D/MurGauche"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Murs/MurGauche"]
 physics_material_override = SubResource("PhysicsMaterial_ospel")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGCombiner3D/MurGauche/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Murs/MurGauche/StaticBody3D"]
 shape = SubResource("BoxShape3D_fvwov")
 
-[node name="MurDroit" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, 2, 0)
+[node name="MurDroit" type="CSGBox3D" parent="Murs"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.97887, 2, 0)
 size = Vector3(10, 4, 0.1)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="CSGCombiner3D/MurDroit"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Murs/MurDroit"]
 physics_material_override = SubResource("PhysicsMaterial_ospel")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGCombiner3D/MurDroit/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Murs/MurDroit/StaticBody3D"]
 shape = SubResource("BoxShape3D_fvwov")
 
-[node name="Toit" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="Toit" type="CSGBox3D" parent="Murs"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 4, 0)
 size = Vector3(10, 10, 0.1)
 
 [node name="CeillingLight" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185498, 3, -2.68985)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.185498, 3, -2.26568)
 
 [node name="HangingLight" type="MeshInstance3D" parent="CeillingLight"]
 transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0, 0)
@@ -120,7 +120,7 @@ mesh = ExtResource("4_1tc5e")
 skeleton = NodePath("../..")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="CeillingLight"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.409277, 0, 0.370178)
 shadow_enabled = true
 spot_range = 7.807
 spot_angle = 38.57

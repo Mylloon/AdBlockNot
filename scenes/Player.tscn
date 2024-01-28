@@ -26,7 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 [node name="Camera3D" type="Camera3D" parent="Head"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 0.00102978, -1, 0, 1, 0.00102978, 0, 0, -0.551316)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.216)
 mesh = SubResource("PlaneMesh_g0wf5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
