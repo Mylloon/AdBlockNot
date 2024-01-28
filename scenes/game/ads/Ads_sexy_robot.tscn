@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgsu5jn00smc8"]
+[gd_scene load_steps=8 format=3 uid="uid://cyxifateppwnk"]
 
 [ext_resource type="PackedScene" uid="uid://n06gkookqeml" path="res://scenes/game/windows/Ads.tscn" id="1_g6iem"]
 [ext_resource type="Script" path="res://scripts/ads/Ads_sexy_robot.gd" id="2_17d4p"]
@@ -14,7 +14,7 @@ thickness = 20
 color = Color(0.823529, 0, 0, 1)
 thickness = 20
 
-[node name="Windows" instance=ExtResource("1_g6iem")]
+[node name="Windows2" instance=ExtResource("1_g6iem")]
 script = ExtResource("2_17d4p")
 
 [node name="Panel" parent="." index="0"]
