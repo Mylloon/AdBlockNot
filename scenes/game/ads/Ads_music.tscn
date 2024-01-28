@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d2irk5735vjls"]
+[gd_scene load_steps=7 format=3 uid="uid://d2irk5735vjls"]
 
 [ext_resource type="PackedScene" uid="uid://n06gkookqeml" path="res://scenes/game/windows/Ads.tscn" id="1_0jlha"]
 [ext_resource type="Script" path="res://scripts/ads/ads_music.gd" id="2_l1b3e"]
 [ext_resource type="Texture2D" uid="uid://dd8civte7y1h4" path="res://ressources/assets/MeowSounds/Music.png" id="3_b60lt"]
 [ext_resource type="Texture2D" uid="uid://dthd82kqaqqs0" path="res://ressources/assets/MeowSounds/MusicButton.png" id="4_yng4o"]
 [ext_resource type="AudioStream" uid="uid://b6r8lvskuu228" path="res://ressources/sounds/menu/miaou.mp3" id="5_gf3d2"]
+[ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="6_hffn4"]
 
 [node name="Windows" instance=ExtResource("1_0jlha")]
 script = ExtResource("2_l1b3e")
@@ -31,5 +32,15 @@ flat = true
 stream = ExtResource("5_gf3d2")
 volume_db = 24.0
 bus = &"SFX"
+
+[node name="Label" type="Label" parent="." index="5"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 12.0
+offset_right = 407.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("6_hffn4")
+theme_override_font_sizes/font_size = 41
+text = "Nyan.wav"
 
 [connection signal="pressed" from="MusicButton/Button" to="." method="_on_button2_pressed"]

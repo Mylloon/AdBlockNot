@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://wo0ujdthnlrb"]
+[gd_scene load_steps=4 format=3 uid="uid://wo0ujdthnlrb"]
 
 [ext_resource type="PackedScene" uid="uid://n06gkookqeml" path="res://scenes/game/windows/Ads.tscn" id="1_6ucwo"]
 [ext_resource type="Script" path="res://scripts/ads/Ads_normal.gd" id="2_usogt"]
+[ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="3_eon0n"]
 
 [node name="Windows" instance=ExtResource("1_6ucwo")]
 script = ExtResource("2_usogt")
@@ -9,3 +10,12 @@ script = ExtResource("2_usogt")
 [node name="Sprite2D" type="Sprite2D" parent="." index="2"]
 position = Vector2(10, 53)
 scale = Vector2(0.4, 0.34)
+
+[node name="Label" type="Label" parent="." index="3"]
+offset_left = 17.0
+offset_top = 12.0
+offset_right = 407.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("3_eon0n")
+theme_override_font_sizes/font_size = 41
+text = "CloseMe.txt"

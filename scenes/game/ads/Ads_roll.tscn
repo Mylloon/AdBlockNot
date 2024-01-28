@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dk6bkpnylxwdb"]
+[gd_scene load_steps=6 format=3 uid="uid://dk6bkpnylxwdb"]
 
 [ext_resource type="PackedScene" uid="uid://n06gkookqeml" path="res://scenes/game/windows/Ads.tscn" id="1_n2kk4"]
 [ext_resource type="Script" path="res://scripts/ads/ads_roll.gd" id="2_kihjv"]
 [ext_resource type="Texture2D" uid="uid://bbi7rhpstsku4" path="res://ressources/assets/RollDice/Dice.png" id="3_7himq"]
 [ext_resource type="Texture2D" uid="uid://br2tesflbta84" path="res://ressources/assets/RollDice/ButtonDice.png" id="4_ldetv"]
+[ext_resource type="FontFile" uid="uid://dwgslonlru0ck" path="res://ressources/Battlenet.ttf" id="5_ranvp"]
 
 [node name="Windows" instance=ExtResource("1_n2kk4")]
 script = ExtResource("2_kihjv")
@@ -43,5 +44,14 @@ offset_right = 198.0
 offset_bottom = 55.0
 focus_mode = 0
 flat = true
+
+[node name="Label" type="Label" parent="." index="4"]
+offset_left = 17.0
+offset_top = 12.0
+offset_right = 407.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("5_ranvp")
+theme_override_font_sizes/font_size = 41
+text = "RollIt.psd"
 
 [connection signal="pressed" from="ButtonDice/Button" to="." method="_on_button_pressed"]
