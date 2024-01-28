@@ -128,3 +128,16 @@ stream = ExtResource("9_j4hp8")
 volume_db = -14.102
 autoplay = true
 bus = &"Music"
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_right = 246.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("1_7ecbr")
+theme_override_font_sizes/font_size = 46
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
