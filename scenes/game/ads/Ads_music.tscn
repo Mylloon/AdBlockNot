@@ -1,7 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2irk5735vjls"]
+[gd_scene load_steps=6 format=3 uid="uid://d2irk5735vjls"]
 
 [ext_resource type="PackedScene" uid="uid://n06gkookqeml" path="res://scenes/game/windows/Ads.tscn" id="1_0jlha"]
 [ext_resource type="Script" path="res://scripts/ads/ads_music.gd" id="2_l1b3e"]
+[ext_resource type="Texture2D" uid="uid://dd8civte7y1h4" path="res://ressources/assets/MeowSounds/Music.png" id="3_b60lt"]
+[ext_resource type="Texture2D" uid="uid://dthd82kqaqqs0" path="res://ressources/assets/MeowSounds/MusicButton.png" id="4_yng4o"]
+[ext_resource type="AudioStream" uid="uid://b6r8lvskuu228" path="res://ressources/sounds/menu/miaou.mp3" id="5_gf3d2"]
 
 [node name="Windows" instance=ExtResource("1_0jlha")]
 script = ExtResource("2_l1b3e")
+
+[node name="Music" type="Sprite2D" parent="." index="2"]
+position = Vector2(251, 224.5)
+scale = Vector2(0.401667, 0.351042)
+texture = ExtResource("3_b60lt")
+
+[node name="MusicButton" type="Sprite2D" parent="." index="3"]
+position = Vector2(252, 336)
+scale = Vector2(0.625, 0.441892)
+texture = ExtResource("4_yng4o")
+
+[node name="Button" type="Button" parent="MusicButton" index="0"]
+offset_left = -115.0
+offset_top = -93.0
+offset_right = 117.0
+offset_bottom = 93.0
+focus_mode = 0
+flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
+stream = ExtResource("5_gf3d2")
+bus = &"SFX"
+
+[connection signal="pressed" from="MusicButton/Button" to="." method="_on_button_pressed"]

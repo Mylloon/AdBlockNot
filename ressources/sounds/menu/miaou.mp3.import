@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/miaou.mp3-14011d42bc74dc84a6a6273c0e7c06a2.mp
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
